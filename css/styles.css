@@ -48,6 +48,10 @@ li {
     overflow: hidden;
 }
 
+.header {
+    display: flex;
+}
+
 /* Логотип */
 .logo {
     font-family: 'Raleway', sans-serif;
@@ -56,6 +60,7 @@ li {
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    display: inline-block;
 }
 .logo-header {
     color: var(--header-logo-color);
@@ -66,11 +71,18 @@ li {
 }
 
 /* Навігація по сайту */
+.site-nav-list {
+    display: flex;
+}
 .site-nav {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
     text-decoration: none;
+}
+
+.site-nav-list > .item:not(:last-child) {
+    margin-right: 50px;
 }
 
 .site-nav:hover,
@@ -112,8 +124,6 @@ color: var(--accent-color);
 
 /* Секція герой */
 .hero {
-    height: 600px;
-    width: 1600px;
     background-color: var(--hero-bg-color);
     display: inline-block;
 }
@@ -128,8 +138,6 @@ color: var(--accent-color);
 }
 
 .hero-button {
-    width: 216px;
-    height: 50px;
     background-color: var(--accent-color);
     border: none;
     font-family: 'Roboto', sans-serif;
@@ -170,6 +178,9 @@ color: var(--accent-color);
 }
 
 /* Наша команда */
+.team {
+    background-color: var(--button-bg-color);
+}
 
 .team-name {
     font-weight: 500;
@@ -221,6 +232,7 @@ color: var(--accent-color);
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    color: var(--primary-text-color);
 }
 
 .projects-type {
