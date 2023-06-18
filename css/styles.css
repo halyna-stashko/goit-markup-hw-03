@@ -51,6 +51,10 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
+img {
+    display: block;
+}
+
 .list {
     padding: 0px;
     margin: 0px;
@@ -134,7 +138,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 .footer .logo {
     padding-top: 0;
-    padding-bottom: 28px;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-bottom: 28px;
 }
 
 /* Навігація по сайту */
@@ -191,6 +197,10 @@ margin-left: 40px;
     color: var(--primary-white-color);
 }
 
+.address > .item:not(:last-child) {
+    margin-bottom: 12px;
+}
+
 .contact-footer.item {
     color: var(--contact-footer-color);
 }
@@ -214,6 +224,8 @@ margin-left: 40px;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+    width: 796px;
+    text-align: center;
     text-transform: uppercase;
     color: var(--primary-white-color);
     font-weight: 900;
@@ -244,8 +256,12 @@ margin-left: 40px;
 
 .advantages {
     display: flex;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: -30px;
+}
+
+.advantages-item {
+    flex-basis: calc(100% / 4);
+    margin-left: 30px;
 }
 
 .advantages-title {
@@ -268,11 +284,11 @@ margin-left: 40px;
 
 .work-img {
     display: flex;
-    justify-content: space-between;    
+    margin-left: -30px;   
 }
 
-.work-img .img {
-    display: block;
+.work-img > .item {
+    margin-left: 30px;
 }
 
 .title {
@@ -291,16 +307,17 @@ margin-left: 40px;
 
 .team-cards {
 display: flex;
-justify-content: space-between;
+margin-left: -30px;;
 }
 
 .team-cards > .item {
     background-color: var(--main-bg-color);
+    margin-left: 30px;
 }
 
-.team-photo {
-    margin-bottom: 30px;
-    text-align: center;
+.team-disc {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .team-name {
@@ -313,7 +330,6 @@ justify-content: space-between;
 }
 
 .team-prof {
-    margin-bottom: 30px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
@@ -359,8 +375,8 @@ justify-content: space-between;
 
 .projects-filter {
     display: flex;
+    margin-bottom: 50px;
     justify-content: center;
-    margin-bottom: 34px;
 }
 
 .projects-filter .item + .item {
@@ -370,7 +386,6 @@ justify-content: space-between;
 .projects-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .projects-list > .item {
@@ -386,9 +401,9 @@ justify-content: space-between;
 }
 
 .project-disc {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 24px;
     border: 1px solid var(--portfolio-stroke);
+    border-top: none;
 }
 
 .projects-img {
@@ -397,8 +412,6 @@ justify-content: space-between;
 }
 
 .projects-name {
-    margin-left: 24px;
-    margin-right: 24px;
     margin-bottom: 4px;
     font-size: 18px;
     line-height: 2;
@@ -407,8 +420,6 @@ justify-content: space-between;
 }
 
 .projects-type {
-    margin-left: 24px;
-    margin-right: 24px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
